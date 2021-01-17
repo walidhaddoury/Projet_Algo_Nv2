@@ -1,0 +1,29 @@
+- Story 1 :
+node ./main.js -action help
+
+- Story 2 :
+node ./main.js -action transform movies.json output.json
+
+- Story 4 :
+node ./main.js -action sortByDate movies.json moviesSortedByDate.json
+node ./main.js -action sortByName movies.json moviesSortedByName.json
+
+- Story 5 :
+node ./main.js -action searchDate movies.json 2021 false
+node ./main.js -action searchDate moviesSortedByDate.json 2021 true
+
+- Story 6 :
+node ./main.js -action searchKeyWord movies.json horror Thriller
+
+- Story 7 : 
+node ./main.js -save TEST -action searchKeyWord movies.json horror Thriller
+node ./main.js -action searchKeyWord movies.json horror Action -save test
+
+node ./main.js -save coucou -action searchDate movies.json 2021
+node ./main.js -action searchDate movies.json 2021 -save coucou
+
+node ./main.js -save coucou -action searchDate movies.json 2021 false
+node ./main.js -action searchDate movies.json 2021 false -save coucou
+
+node ./main.js -save trufu2 -action searchDate moviesSortedByDate.json 2021 true
+node ./main.js -action searchDate moviesSortedByDate.json 2021 true -save trufu
